@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prayagraj Tourism & Maha Kumbh 2024</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ff8c00; /* Bhagva color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #e07b00; /* Slightly darker Bhagva color */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .nav-link {
+            padding: 0.5rem 1rem;
+        }
+        .nav-link:hover {
+            background-color: #e07b00; /* Darker Bhagva color */
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath stroke="%23fff" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /%3E%3C/svg%3E');
+        }
+
+        /* Sticky Navbar */
+        .navbar-fixed {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('https://media.istockphoto.com/id/500146561/photo/hindu-pilgrim-in-kumbh-mela.jpg?s=612x612&w=0&k=20&c=OhSDueRQNVZOwZPv6oL5DQrLGenLWa2BPj_CGSRdZ00=');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid #ff8c00; /* Bhagva border */
+        }
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 1;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.75rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section Spacing */
+        .py-5 {
+            padding: 5rem 0;
+        }
+
+        /* Section Titles */
+        h2 {
+            margin-bottom: 2rem;
+            color: #ff8c00; /* Bhagva color */
+        }
+
+        /* About Prayagraj Section */
+        #about img {
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Famous Places Section */
+        .place {
+            margin-bottom: 1.5rem;
+        }
+        .place img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .place h4 {
+            color: #ff8c00; /* Bhagva color */
+            margin-top: 1rem;
+            font-size: 1.25rem;
+        }
+        .place p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Booking Buttons */
+        .btn-outline-dark {
+            border-color: #ff8c00;
+            color: #ff8c00;
+        }
+        .btn-outline-dark:hover {
+            background-color: #ff8c00;
+            color: #fff;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
+        .footer a {
+            color: #ff8c00;
+            text-decoration: underline;
+        }
+        .footer p {
+            margin: 0;
+        }
+
+        /* Important Dates List */
+        .list-group-item {
+            background-color: #fff;
+            border: 1px solid #ff8c00;
+        }
+        .list-group-item:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        /* Modern Fancy Touches */
+        .btn-primary {
+            background-color: #ff8c00;
+            border-color: #ff8c00;
+        }
+        .btn-primary:hover {
+            background-color: #e07b00;
+            border-color: #e07b00;
+        }
+        .section-heading {
+            border-bottom: 2px solid #ff8c00;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Prayagraj Tourism</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Prayagraj</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#places">Famous Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dates">Important Dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bookings">Book Transport & Stay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to Maha Kumbh Mela 2024</h1>
+            <p class="lead">Experience the largest religious gathering in the world. Witness the spiritual and cultural celebrations at the Triveni Sangam.</p>
+            <a href="#dates" class="btn btn-primary">View Important Dates</a>
+        </div>
+    </section>
+
+    <!-- About Prayagraj Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-heading">About Prayagraj</h2>
+                    <p>Prayagraj, formerly known as Allahabad, is a city with rich history and religious significance. It is famous for the confluence of the three rivers – Ganga, Yamuna, and Saraswati, known as the Triveni Sangam. The city is a center of cultural and religious events, especially the Maha Kumbh Mela, which attracts millions of devotees from all over the world.</p>
+                    <p>The city also boasts various historical and cultural landmarks, making it a significant destination for tourists and pilgrims alike. The sacred ghats, majestic forts, and historical temples contribute to its spiritual charm and allure.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://media.istockphoto.com/id/501964006/photo/hindu-devotees-crossing-pontoon-bridges-over-ganges-at-kumbh-mela.jpg?s=612x612&w=0&k=20&c=dYDkF7DR7lI1NxE-7zAHTrY9qZLnj07HYoLdu0n9KY0=" alt="Triveni Sangam">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Famous Places Section -->
+<section id="places" class="py-5">
+    <div class="container">
+        <h2 class="text-center section-heading">Famous Places to Visit</h2>
+        <div class="row">
+            <div class="col-md-4 place">
+                <img src="https://media.istockphoto.com/id/501964006/photo/hindu-devotees-crossing-pontoon-bridges-over-ganges-at-kumbh-mela.jpg?s=612x612&w=0&k=20&c=dYDkF7DR7lI1NxE-7zAHTrY9qZLnj07HYoLdu0n9KY0=" alt="Triveni Sangam">
+                <h4 class="mt-2">Triveni Sangam</h4>
+                <p>The sacred confluence of the Ganga, Yamuna, and Saraswati rivers, revered for its spiritual significance.</p>
+            </div>
+            <div class="col-md-4 place">
+                <img src="https://imgs.search.brave.com/QyALa73Edj2oHT2YRaz1WHana-0mfHyHehv0W1f4amI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTEudGhyaWxsb3Bo/aWxpYS5jb20vZmls/ZXN0b3JlLzBsamo4/MG40ZnpybHNhb2pp/MHo0YjZnM3NrNGpf/MTU4NDM2MzkzMV9z/aHV0dGVyc3RvY2tf/MTMxODA2MTIzNy5q/cGc_dz03NTMmaD00/NTAmZHBy" alt="Allahabad Fort">
+                <h4 class="mt-2">Allahabad Fort</h4>
+                <p>A historic fort built by Emperor Akbar, offering panoramic views of the confluence of Ganga and Yamuna.</p>
+            </div>
+            <div class="col-md-4 place">
+                <img src="https://cdn.s3waas.gov.in/s3cd00692c3bfe59267d5ecfac5310286c/uploads/bfi_thumb/2018062135-olwcnpogh6uh36gyokhh0o94ltz6n8r5lzbc367is4.jpg" alt="Anand Bhavan">
+                <h4 class="mt-2">Anand Bhavan</h4>
+                <p>The residence of the Nehru family, now a museum showcasing India's freedom struggle.</p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="more-places.html" class="btn btn-primary">Explore More Places</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Important Dates Section -->
+    <section id="dates" class="important-dates py-5">
+        <div class="container">
+            <h2 class="text-center section-heading">Maha Kumbh 2024: Important Dates</h2>
+            <ul class="list-group">
+                <li class="list-group-item">14th January 2024 - Makar Sankranti (First Shahi Snan)</li>
+                <li class="list-group-item">10th February 2024 - Mauni Amavasya (Main Bathing Day)</li>
+                <li class="list-group-item">16th February 2024 - Basant Panchami (Third Shahi Snan)</li>
+                <li class="list-group-item">8th March 2024 - Maha Shivratri</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="bookings" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-heading">Book Transport & Stay</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a href="https://www.uber.com/" target="_blank" class="btn btn-outline-dark">Book Uber</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.olacabs.com/" target="_blank" class="btn btn-outline-dark">Book Ola</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.booking.com/" target="_blank" class="btn btn-outline-dark">Book Hotels</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>© 2024 Prayagraj Tourism. All Rights Reserved.</p>
+            <p><a href="#contact">Contact Us</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
